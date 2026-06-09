@@ -4,7 +4,7 @@
 	         AnyLogic Project File
 *************************************************
 -->
-<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.9.8.202602271013" AlpVersion="8.9.7">
+<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.9.8.202602271016" AlpVersion="8.9.7">
 <Model>
 	<Id>1780905585437</Id>
 	<Name><![CDATA[Boilers-test]]></Name>
@@ -139,6 +139,60 @@
 						</InitialValue>
 					</Properties>
 				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1780919491930</Id>
+					<Name><![CDATA[selectedBoilersStartWindow]]></Name>
+					<Description><![CDATA[Флаг (true/false) 
+Показывает, выбрана ли вкладка "Котлы"
+Нужна для перемещения панельки на координаты выбранного окошка и цвета кнопок]]></Description>
+					<X>-280</X><Y>4600</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[boolean]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[true]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1780919491933</Id>
+					<Name><![CDATA[selectedModesStartWindow]]></Name>
+					<Description><![CDATA[Флаг (true/false) 
+Показывает, выбрана ли вкладка "Режимы работы"
+Нужна для перемещения панельки на координаты выбранного окошка и цвета кнопок]]></Description>
+					<X>-280</X><Y>4620</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[boolean]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[false]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1780919491936</Id>
+					<Name><![CDATA[selectedConsumptionStartWindow]]></Name>
+					<Description><![CDATA[Флаг (true/false) 
+Показывает, выбрана ли вкладка "Потребление"
+Нужна для перемещения панельки на координаты выбранного окошка и цвета кнопок]]></Description>
+					<X>-280</X><Y>4640</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[boolean]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[false]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
 				<Variable Class="Parameter">
 					<Id>1780914056091</Id>
 					<Name><![CDATA[trololo]]></Name>
@@ -161,20 +215,49 @@
 					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
-					<Id>1780914647346</Id>
-					<Name><![CDATA[trololo2]]></Name>
-					<X>-320</X><Y>220</Y>
+					<Id>1780919491948</Id>
+					<Name><![CDATA[lightColorWindowButton]]></Name>
+					<Description><![CDATA[Цвет неактивной вкладки (светлый)]]></Description>
+					<X>-280</X><Y>4690</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[double]]></Type>
+						<Type><![CDATA[Color]]></Type>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[new Color(157, 197, 202)]]></Code>
+						</DefaultValue>
 						<ParameterEditor>
-							<Id>1780914647344</Id>
-							<EditorContolType>TEXT_BOX</EditorContolType>
+							<Id>1780919491946</Id>
+							<EditorContolType>COLOR_PICKER</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1780919491952</Id>
+					<Name><![CDATA[darkColorWindowButton]]></Name>
+					<Description><![CDATA[Цвет активной вкладки (темный)]]></Description>
+					<X>-280</X><Y>4670</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[Color]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[teal]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1780919491950</Id>
+							<EditorContolType>COLOR_PICKER</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
 							<DelimeterType>NO_DELIMETER</DelimeterType>
@@ -182,6 +265,71 @@
 					</Properties>                 
 				</Variable>
 			</Variables>
+			<Functions>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>VOID</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					<Id>1780919491920</Id>
+					<Name><![CDATA[OnClickButtonBoilersStartWindow]]></Name>
+					<Description><![CDATA[Действия при нажатии кнопки "Котлы"]]></Description>
+					<X>-280</X><Y>4720</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Body><![CDATA[selectedBoilersStartWindow = true;
+selectedModesStartWindow = false;
+selectedConsumptionStartWindow = false;
+
+viewAreaBoilersStartWindow.navigateTo();
+
+buttonBoilersStartWindow.setFillColor(darkColorWindowButton);
+buttonModesStartWindow.setFillColor(lightColorWindowButton);
+buttonConsumptionStartWindow.setFillColor(lightColorWindowButton);]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>VOID</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					<Id>1780919491924</Id>
+					<Name><![CDATA[OnClickButtonModesStartWindow]]></Name>
+					<Description><![CDATA[Действия при нажатии кнопки "Режимы работы"]]></Description>
+					<X>-280</X><Y>4740</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Body><![CDATA[selectedBoilersStartWindow = false;
+selectedModesStartWindow = true;
+selectedConsumptionStartWindow = false;
+
+viewAreaModesStartWindow.navigateTo();
+
+buttonBoilersStartWindow.setFillColor(lightColorWindowButton);
+buttonModesStartWindow.setFillColor(darkColorWindowButton);
+buttonConsumptionStartWindow.setFillColor(lightColorWindowButton);]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>VOID</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					<Id>1780919491927</Id>
+					<Name><![CDATA[OnClickbuttonConsumptionStartWindow]]></Name>
+					<Description><![CDATA[Действия при нажатии кнопки "Потребление"]]></Description>
+					<X>-280</X><Y>4760</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Body><![CDATA[selectedBoilersStartWindow = false;
+selectedModesStartWindow = false;
+selectedConsumptionStartWindow = true;
+
+viewAreaConsumptionStartWindow.navigateTo();
+
+buttonBoilersStartWindow.setFillColor(lightColorWindowButton);
+buttonModesStartWindow.setFillColor(lightColorWindowButton);
+buttonConsumptionStartWindow.setFillColor(darkColorWindowButton);]]></Body>
+				</Function>
+			</Functions>
 			<AgentLinks>
 				<AgentLink>
 					<Id>1780905585445</Id>
@@ -219,6 +367,75 @@
 					<LevelVisibility>DIM_NON_CURRENT</LevelVisibility>
 
 			<Presentation>
+				<Rectangle>
+					<Id>1780922673854</Id>
+					<Name><![CDATA[фон2]]></Name>
+					<X>1200</X><Y>900</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Lock>true</Lock>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor/>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<Width>1000</Width>
+					<Height>600</Height>
+					<Rotation>0.0</Rotation>
+					<FillColor>-1052689</FillColor>
+					<FillMaterial>null</FillMaterial>
+				</Rectangle>
+				<Rectangle>
+					<Id>1780922685441</Id>
+					<Name><![CDATA[фон3]]></Name>
+					<X>2400</X><Y>900</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Lock>true</Lock>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor/>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<Width>1000</Width>
+					<Height>600</Height>
+					<Rotation>0.0</Rotation>
+					<FillColor>-1052689</FillColor>
+					<FillMaterial>null</FillMaterial>
+				</Rectangle>
+				<Rectangle>
+					<Id>1780922578014</Id>
+					<Name><![CDATA[фон1]]></Name>
+					<X>0</X><Y>900</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Lock>true</Lock>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor/>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<Width>1000</Width>
+					<Height>600</Height>
+					<Rotation>0.0</Rotation>
+					<FillColor>-1052689</FillColor>
+					<FillMaterial>null</FillMaterial>
+				</Rectangle>
 				<Control Type="Window3D">
 					<Id>1780905679948</Id>
 					<Name><![CDATA[window3d]]></Name>
@@ -235,7 +452,7 @@
 				<Rectangle>
 					<Id>1780905888536</Id>
 					<Name><![CDATA[rectangle]]></Name>
-					<X>0</X><Y>0</Y>
+					<X>-20</X><Y>0</Y>
 					<Label><X>10</X><Y>10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -249,7 +466,7 @@
 					<LineColor>-16777216</LineColor>
 					<LineMaterial>null</LineMaterial>
 					<LineStyle>SOLID</LineStyle>
-					<Width>1000</Width>
+					<Width>1020</Width>
 					<Height>600</Height>
 					<Rotation>0.0</Rotation>
 					<FillColor>-655366</FillColor>
@@ -881,6 +1098,230 @@
 						<LabelText><![CDATA[Resset]]></LabelText>
 					</ExtendedProperties>
 				</Control>
+				<Figure3D>
+					<Id>1780914357639</Id>
+					<Name><![CDATA[person]]></Name>
+					<X>-360</X><Y>260</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<X>-360</X><Y>260</Y><Z>0</Z>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<ResourceReference>
+						<PackageName><![CDATA[boilers_test]]></PackageName>
+						<ClassName><![CDATA[3d/person.dae]]></ClassName>
+					</ResourceReference>
+					<ColorTable>
+						<ColorMapping>
+							<Name><![CDATA[Material__3__Surf]]></Name>
+							<OriginalColor>-3355444</OriginalColor>
+						</ColorMapping>
+						<ColorMapping>
+							<Name><![CDATA[Material__5__Surf]]></Name>
+							<OriginalColor>-3355444</OriginalColor>
+						</ColorMapping>
+						<ColorMapping>
+							<Name><![CDATA[Material__6__Surf]]></Name>
+							<OriginalColor>-4083577</OriginalColor>
+						</ColorMapping>
+						<ColorMapping>
+							<Name><![CDATA[Material__2__Surf]]></Name>
+							<OriginalColor>-13355980</OriginalColor>
+						</ColorMapping>
+						<ColorMapping>
+							<Name><![CDATA[Material__4__Surf]]></Name>
+							<OriginalColor>-13355980</OriginalColor>
+						</ColorMapping>
+						<ColorMapping>
+							<Name><![CDATA[Material__1__Surf]]></Name>
+							<OriginalColor>-5279952</OriginalColor>
+						</ColorMapping>
+					</ColorTable>
+					<AutoScale>true</AutoScale>
+					<Scale>13.3</Scale>
+					<Rotation>0.0</Rotation>
+					<AxisOrder>XYZ_AXIS_ORDER</AxisOrder>
+					<ApplyShading>true</ApplyShading>
+					<InternalLighting>OFF</InternalLighting>
+					<IgnoreSceneLights>false</IgnoreSceneLights>
+</Figure3D>
+				<Group>
+					<Id>1780919491886</Id>
+					<Name><![CDATA[StartPanelGroup]]></Name>
+					<X>510</X><Y>4620</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<XCode><![CDATA[selectedBoilersStartWindow ? 500 : selectedModesStartWindow ? 1700 : 2900]]></XCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+
+			<Presentation>
+				<Image>
+					<Id>1780919491888</Id>
+					<Name><![CDATA[image4]]></Name>
+					<X>355</X><Y>-45</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Width>145</Width>
+					<Height>90</Height>
+					<Rotation>0.0</Rotation>
+					<ImageFiles>
+						<ImageResourceReference>
+							<PackageName><![CDATA[boilers_test]]></PackageName>
+							<ClassName><![CDATA[Рисунок_OEM.png]]></ClassName>
+						</ImageResourceReference>
+					</ImageFiles>
+					<OriginalSize>false</OriginalSize>
+				</Image>
+				<RoundedRectangle>
+					<Id>1780919491890</Id>
+					<Name><![CDATA[buttonConsumptionStartWindow]]></Name>
+					<X>70</X><Y>-40</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<OnClickCode><![CDATA[OnClickbuttonConsumptionStartWindow();]]></OnClickCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor/>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<Width>280</Width>
+					<Height>40</Height>
+					<Rotation>0.0</Rotation>
+					<FillColor>-6437430</FillColor>
+					<FillMaterial>null</FillMaterial>
+					<ArcRadius>1</ArcRadius>
+				</RoundedRectangle>
+				<RoundedRectangle>
+					<Id>1780919491892</Id>
+					<Name><![CDATA[buttonBoilersStartWindow]]></Name>
+					<X>-500</X><Y>-40</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<OnClickCode><![CDATA[OnClickButtonBoilersStartWindow();]]></OnClickCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor/>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<Width>275</Width>
+					<Height>40</Height>
+					<Rotation>0.0</Rotation>
+					<FillColor>-6437430</FillColor>
+					<FillMaterial>null</FillMaterial>
+					<ArcRadius>1</ArcRadius>
+				</RoundedRectangle>
+				<Text>
+					<Id>1780919491894</Id>
+					<Name><![CDATA[t1]]></Name>
+					<X>-355</X><Y>-35</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-1</Color>
+					<Text><![CDATA[КОТЛЫ]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>28</Size>
+						<Style>1</Style>
+					</Font>
+					<Alignment>CENTER</Alignment>
+				</Text>
+				<Text>
+					<Id>1780919491896</Id>
+					<Name><![CDATA[t3]]></Name>
+					<X>210</X><Y>-35</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-1</Color>
+					<Text><![CDATA[ПОТРЕБЛЕНИЕ]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>28</Size>
+						<Style>1</Style>
+					</Font>
+					<Alignment>CENTER</Alignment>
+				</Text>
+				<RoundedRectangle>
+					<Id>1780919491898</Id>
+					<Name><![CDATA[buttonModesStartWindow]]></Name>
+					<X>-225</X><Y>-40</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<OnClickCode><![CDATA[OnClickButtonModesStartWindow();]]></OnClickCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<ZHeight>10</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor/>
+					<LineMaterial>null</LineMaterial>
+					<LineStyle>SOLID</LineStyle>
+					<Width>295</Width>
+					<Height>40</Height>
+					<Rotation>0.0</Rotation>
+					<FillColor>-6437430</FillColor>
+					<FillMaterial>null</FillMaterial>
+					<ArcRadius>1</ArcRadius>
+				</RoundedRectangle>
+				<Text>
+					<Id>1780919491900</Id>
+					<Name><![CDATA[t2]]></Name>
+					<X>-75</X><Y>-35</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-1</Color>
+					<Text><![CDATA[РЕЖИМЫ РАБОТЫ]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>28</Size>
+						<Style>1</Style>
+					</Font>
+					<Alignment>CENTER</Alignment>
+				</Text>
+			</Presentation>
+
+				</Group>
 			</Presentation>
 
 				</Level>
@@ -902,6 +1343,42 @@
 					<Id>1780905633412</Id>
 					<Name><![CDATA[viewArea]]></Name>
 					<X>1000</X><Y>0</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Title><![CDATA[]]></Title>
+					<Width>1000</Width>
+					<Height>600</Height>
+				</Area>
+				<Area>
+					<Id>1780919491940</Id>
+					<Name><![CDATA[viewAreaBoilersStartWindow]]></Name>
+					<X>10</X><Y>4580</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Title><![CDATA[]]></Title>
+					<Width>1000</Width>
+					<Height>600</Height>
+				</Area>
+				<Area>
+					<Id>1780919491942</Id>
+					<Name><![CDATA[viewAreaModesStartWindow]]></Name>
+					<X>1210</X><Y>4580</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Title><![CDATA[]]></Title>
+					<Width>1000</Width>
+					<Height>600</Height>
+				</Area>
+				<Area>
+					<Id>1780919491944</Id>
+					<Name><![CDATA[viewAreaConsumptionStartWindow]]></Name>
+					<X>2410</X><Y>4580</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1005,7 +1482,10 @@
 					<ParameterName><![CDATA[trololo]]></ParameterName>
 				</Parameter>
 				<Parameter>
-					<ParameterName><![CDATA[trololo2]]></ParameterName>
+					<ParameterName><![CDATA[lightColorWindowButton]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[darkColorWindowButton]]></ParameterName>
 				</Parameter>
 			</Parameters>
 			<PresentationProperties>
@@ -1026,6 +1506,20 @@
 			<BypassInitialScreen>true</BypassInitialScreen>
 		</SimulationExperiment>	
 	</Experiments>
+	<ModelResources>
+		<Resource>
+			<Id>1780914360878</Id>
+			<Path><![CDATA[3d/person.dae]]></Path>
+			<ReferencedFromUserCode>false</ReferencedFromUserCode>
+			<Location>FILE_SYSTEM</Location>
+		</Resource>
+		<Resource>
+			<Id>1780919491961</Id>
+			<Path><![CDATA[Рисунок_OEM.png]]></Path>
+			<ReferencedFromUserCode>false</ReferencedFromUserCode>
+			<Location>FILE_SYSTEM</Location>
+		</Resource>
+	</ModelResources>
     <RequiredLibraryReference>
 		<LibraryName><![CDATA[com.anylogic.libraries.modules.markup_descriptors]]></LibraryName>
 		<VersionMajor>1</VersionMajor>
